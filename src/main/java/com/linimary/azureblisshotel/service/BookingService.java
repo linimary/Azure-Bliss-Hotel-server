@@ -1,6 +1,7 @@
 package com.linimary.azureblisshotel.service;
 
 import com.linimary.azureblisshotel.exception.InvalidBookingRequestException;
+import com.linimary.azureblisshotel.exception.ResourceNotFoundException;
 import com.linimary.azureblisshotel.model.BookedRoom;
 import com.linimary.azureblisshotel.model.Room;
 import com.linimary.azureblisshotel.repository.BookingRepository;
@@ -53,7 +54,8 @@ public class BookingService implements IBookingService {
 
     @Override
     public BookedRoom findByBookingConfirmationCode(String confirmationCode) {
-        return bookingRepository.findByBookingConfirmationCode(confirmationCode);
+        return bookingRepository.findByBookingConfirmationCode(confirmationCode)
+                .orElseThrow(() -> new ResourceNotFoundException("No booking found with booking code: " + confirmationCode));
     }
 
     private boolean roomIsAvailable(BookedRoom bookingRequest, List<BookedRoom> existingBookings) {
