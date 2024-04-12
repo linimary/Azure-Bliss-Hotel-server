@@ -2,6 +2,8 @@
 
 This project is aimed at providing a comprehensive solution for managing hotel operations, including room bookings, reservation management, and administrative tasks. The application is built using Spring Boot, Spring Security, MySQL, and React, combining powerful backend functionalities with a modern and intuitive frontend interface.
 
+[Explore the frontend here](https://github.com/linimary/azure-bliss-hotel-client)
+
 ## Features
 - User Authentication and Authorization: Utilizing Spring Security, users can securely sign up, log in, and access features based on their roles.
 - Room Booking: Guests can browse available rooms, view details, and book rooms for their desired dates.
