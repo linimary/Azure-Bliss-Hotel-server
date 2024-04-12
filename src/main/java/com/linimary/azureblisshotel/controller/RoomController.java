@@ -27,7 +27,6 @@ import java.util.Optional;
 
 @RestController
 @RequiredArgsConstructor
-@CrossOrigin
 @RequestMapping("/rooms")
 public class RoomController {
 
