@@ -23,7 +23,7 @@ This project is aimed at providing a comprehensive solution for managing hotel o
   ![find-by-confirmation-code](https://github.com/linimary/Azure-Bliss-Hotel-server/assets/125043957/ef77900a-a629-4183-83ce-e15c211f5ac4)
   
 
-  - **User Authentication and Authorization**: Utilizing Spring Security, users can securely sign up, log in, and access features based on their roles.
+- **User Authentication and Authorization**: Utilizing Spring Security, users can securely sign up, log in, and access features based on their roles.
   
   ![login](https://github.com/linimary/Azure-Bliss-Hotel-server/assets/125043957/9fc6f523-4e41-416b-9671-d8a7cfa1a923)
 
