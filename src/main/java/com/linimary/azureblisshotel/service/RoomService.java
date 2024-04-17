@@ -19,7 +19,7 @@ import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
-public class RoomServiceImpl implements IRoomService {
+public class RoomService implements IRoomService {
 
     private final RoomRepository roomRepository;
 
@@ -75,8 +75,8 @@ public class RoomServiceImpl implements IRoomService {
 
     @Override
     public Room updateRoom(Long roomId, String roomType, BigDecimal roomPrice, byte[] photoBytes) {
-        Room room = roomRepository.findById(roomId)
-                .orElseThrow(() -> new ResourceNotFoundException("Room not found"));
+        Room room = roomRepository.findById(roomId).get();
+//                .orElseThrow(() -> new ResourceNotFoundException("Room not found"));
 
         if (roomType != null) room.setRoomType(roomType);
         if (roomPrice != null) room.setRoomPrice(roomPrice);

@@ -29,7 +29,7 @@ public class RoleService implements IRoleService {
         String roleName = "ROLE_" + theRole.getName().toUpperCase();
         Role role = new Role(roleName);
 
-        if (roleRepository.existsByName(role)) {
+        if (roleRepository.existsByName(roleName)) {
             throw new RoleAlreadyExistsException(theRole.getName() + " role already exists");
         }
 
@@ -81,7 +81,6 @@ public class RoleService implements IRoleService {
     @Override
     public Role removeAllUsersFromRole(Long roleId) {
         Optional<Role> role = roleRepository.findById(roleId);
-//        role.get().removeAllUsersFromRole();
         role.ifPresent(Role::removeAllUsersFromRole);
 
         return roleRepository.save(role.get());

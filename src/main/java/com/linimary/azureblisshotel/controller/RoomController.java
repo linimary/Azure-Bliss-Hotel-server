@@ -4,6 +4,7 @@ import com.linimary.azureblisshotel.exception.PhotoRetrievalException;
 import com.linimary.azureblisshotel.exception.ResourceNotFoundException;
 import com.linimary.azureblisshotel.model.BookedRoom;
 import com.linimary.azureblisshotel.model.Room;
+import com.linimary.azureblisshotel.response.BookingResponse;
 import com.linimary.azureblisshotel.response.RoomResponse;
 import com.linimary.azureblisshotel.service.BookingService;
 import com.linimary.azureblisshotel.service.IRoomService;
@@ -131,13 +132,13 @@ public class RoomController {
 
     private RoomResponse getRoomResponse(Room room) {
         List<BookedRoom> bookings = getAllBookingsByRoomId(room.getId());
-//        List<BookingResponse> bookingInfo = bookings
-//                .stream()
-//                .map(booking -> new BookingResponse(
-//                        booking.getBookingId(),
-//                        booking.getCheckInDate(),
-//                        booking.getCheckOutDate(),
-//                        booking.getBookingConfirmationCode())).toList();
+        List<BookingResponse> bookingInfo = bookings
+                .stream()
+                .map(booking -> new BookingResponse(
+                        booking.getBookingId(),
+                        booking.getCheckInDate(),
+                        booking.getCheckOutDate(),
+                        booking.getBookingConfirmationCode())).toList();
 
         byte[] photoBytes = null;
         Blob photoBlob = room.getPhoto();
@@ -155,7 +156,8 @@ public class RoomController {
                 room.getRoomType(),
                 room.getRoomPrice(),
                 room.isBooked(),
-                photoBytes);
+                photoBytes,
+                bookingInfo);
     }
 
     private List<BookedRoom> getAllBookingsByRoomId(Long roomId) {

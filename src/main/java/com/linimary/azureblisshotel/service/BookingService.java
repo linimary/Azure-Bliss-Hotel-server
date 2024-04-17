@@ -22,6 +22,12 @@ public class BookingService implements IBookingService {
         return bookingRepository.findAll();
     }
 
+    @Override
+    public List<BookedRoom> getBookingByUserEmail(String email) {
+        return bookingRepository.findByGuestEmail(email);
+    }
+
+    @Override
     public List<BookedRoom> getAllBookingsByRoomId(Long roomId) {
         return bookingRepository.findByRoomId(roomId);
     }
