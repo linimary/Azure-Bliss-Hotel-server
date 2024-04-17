@@ -5,13 +5,6 @@ This project is aimed at providing a comprehensive solution for managing hotel o
 [Explore the frontend here](https://github.com/linimary/azure-bliss-hotel-client)
 
 ## Features
-- User Authentication and Authorization: Utilizing Spring Security, users can securely sign up, log in, and access features based on their roles.
-  
-  ![login](https://github.com/linimary/Azure-Bliss-Hotel-server/assets/125043957/9fc6f523-4e41-416b-9671-d8a7cfa1a923)
-
-  ![register](https://github.com/linimary/Azure-Bliss-Hotel-server/assets/125043957/54e036f6-a286-4c31-b31d-809ca17507a8)
-
-  ![profile](https://github.com/linimary/Azure-Bliss-Hotel-server/assets/125043957/664fb753-227e-464c-a3ab-2e40dc888077)
   
 - Room Booking: Guests can browse available rooms, view details, and book rooms for their desired dates.
 
@@ -29,6 +22,14 @@ This project is aimed at providing a comprehensive solution for managing hotel o
 
   ![find-by-confirmation-code](https://github.com/linimary/Azure-Bliss-Hotel-server/assets/125043957/ef77900a-a629-4183-83ce-e15c211f5ac4)
 
+  - User Authentication and Authorization: Utilizing Spring Security, users can securely sign up, log in, and access features based on their roles.
+  
+  ![login](https://github.com/linimary/Azure-Bliss-Hotel-server/assets/125043957/9fc6f523-4e41-416b-9671-d8a7cfa1a923)
+
+  ![register](https://github.com/linimary/Azure-Bliss-Hotel-server/assets/125043957/54e036f6-a286-4c31-b31d-809ca17507a8)
+
+  ![profile](https://github.com/linimary/Azure-Bliss-Hotel-server/assets/125043957/664fb753-227e-464c-a3ab-2e40dc888077)
+
 - Reservation Management: Administrators have access to a dedicated admin panel to manage reservations, including viewing, editing, and canceling bookings.
 
   ![manage-bookings](https://github.com/linimary/Azure-Bliss-Hotel-server/assets/125043957/59d7d2d9-1734-4ec8-82f2-604043163779)
@@ -40,7 +41,6 @@ This project is aimed at providing a comprehensive solution for managing hotel o
   ![existing-rooms](https://github.com/linimary/Azure-Bliss-Hotel-server/assets/125043957/6e50ffa5-b047-4005-be56-891559fb80eb)
 
 
-- Responsive UI: The frontend is built with React, providing a responsive and user-friendly experience across devices.
 ## Technologies Used
 - Spring Boot
 - Spring Security
